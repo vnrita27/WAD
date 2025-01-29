@@ -24,6 +24,10 @@ input {
   border: none;
   height: 20px;
 }
+input:focus {
+  outline: none; 
+  border: none; 
+}
 div:hover {
   background-color: #95c4d6;
 }
