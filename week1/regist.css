@@ -7,14 +7,19 @@ body{
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-top: 250px;
+    margin-top: 230px;
     border: 1px solid black;
     padding: 30px;
     width: 300px;
     border-radius: 20px;
     background-color: #a6c3ce;
     font-size: 20px;
+    transition: transform 0.6s ease;
 }
+
+.two:hover {
+    transform: scale(1.125);
+  }
 input{
     border-radius: 10px;
     border: none;
