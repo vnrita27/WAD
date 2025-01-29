@@ -27,7 +27,13 @@ body {
   text-decoration: none;
   color: white;
   font-size: 16px;
+  transition: transform 0.6s ease;
 }
+
+.nav-link:hover { 
+  transform: scale(1.125)
+}
+
 
 .search-bar {
   padding: 1px;
@@ -38,8 +44,14 @@ body {
   height: 40px;
 }
 .logo {
-  height: 30px;
+  height: 40px;
   margin: auto;
+  transition: transform 0.6s ease;
+}
+.logo:hover{
+  border: 0.5px solid #333;
+  border-radius: 50%;
+  transform: rotate(360deg);
 }
 
 .card-container {
@@ -59,20 +71,28 @@ body {
   text-align: center;
   font-size: 18px;
   color: #333;
-  transition: transform 0.3s;
+  transition: transform 0.6s;
 }
 
 .card img {
   width: 100px;
-  height: auto; /* Ensure image scales correctly */
+  height: auto; 
 }
 
 .card:hover {
   transform: translateY(-10px);
+  transform: scale(1.1)
 }
 
 .mfle{
   display: flex;
   justify-content: center;
 
+}
+
+button{
+  background-color: #649666;
+  padding: 8px;
+  border-radius: 20px;
+  border: 0.5px solid rgb(166, 201, 72);
 }
