@@ -17,11 +17,6 @@ body {
   color: white;
 }
 
-.left {
-  display: flex;
-  gap: 20px;
-}
-
 .nav-link {
   text-decoration: none;
   color: white;
@@ -41,17 +36,7 @@ body {
   padding-left: 10px;
   transition: transform 0.6s ease;
 }
-input:focus {
-  outline: none;
-  border: none;
-  transform: scale(1.125);
-}
-input:hover {
-  transform: scale(1.125);
-}
-.right {
-  height: 40px;
-}
+
 .logo {
   height: 40px;
   margin: auto;

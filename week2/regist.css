@@ -1,13 +1,16 @@
-body{
+body {
     background-color: #c5c5a1;
     display: flex;
+    justify-content: center;
+    align-items: center;     
+    height: 100vh;           
+    margin: 0;              
 }
-.two{
+.twot {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: auto;
-    margin-top: 230px;
     border: 1px solid black;
     padding: 30px;
     width: 300px;
@@ -17,7 +20,11 @@ body{
     transition: transform 0.6s ease;
 }
 
-.two:hover {
+.twot:hover {
+    transform: scale(1.125);
+}
+
+.twot:hover {
     transform: scale(1.125);
   }
 input{
