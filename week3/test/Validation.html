@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Form with Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            background-color: #f4f4f9;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin: auto;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <form onsubmit="return validateForm()">
+        <h2>Registration Form</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" value="John Doe" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" value="john.doe@example.com" required>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" value="1234567890" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" value="password123" required>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script src="Validation.js">
+    </script>
+    
+</body>
+</html>
