@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+    <book>
+        <title>Introduction to Algorithms</title>
+        <author>Thomas H. Cormen</author>
+        <publisher>MIT</publisher>
+        <year>2009</year>
+        <price currency="INR">2599</price>
+        <genre>Computer Science</genre>
+    </book>
+    <book>
+        <title>The Alchemist</title>
+        <author>Paulo Coelho</author>
+        <publisher>HarperOne</publisher>
+        <year>2014</year>
+        <price currency="INR">1550</price>
+        <genre>Fiction</genre>
+    </book>
+    <book>
+        <title>Atomic Habits</title>
+        <author>James Clear</author>
+        <publisher>Avery</publisher>
+        <year>2018</year>
+        <price currency="INR">599</price>
+        <genre>Self-Help</genre>
+    </book>
+</bookstore>
