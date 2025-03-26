@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student>
+        <id>101</id>
+        <name>John Doe</name>
+        <age>20</age>
+        <gender>Male</gender>
+        <department>Computer Science</department>
+        <gpa>3.8</gpa>
+    </student>
+    <student>
+        <id>102</id>
+        <name>Jane Smith</name>
+        <age>22</age>
+        <gender>Female</gender>
+        <department>Electrical Engineering</department>
+        <gpa>3.6</gpa>
+    </student>
+</students>

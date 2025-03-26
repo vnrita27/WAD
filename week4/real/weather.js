@@ -13,11 +13,11 @@ fetch('https://api.openweathermap.org/data/2.5/forecast?q=London&cnt=3&appid=3f9
       .catch(error => console.error(error));
 
 
-fetch('https://jsonplaceholder.typicode.com/todos/1')
-    .then(res => res.json())
-    .then(json => console.log(json))
+// fetch('https://jsonplaceholder.typicode.com/todos/1')
+//     .then(res => res.json())
+//     .then(json => console.log(json))
 
 
-    fetch('https://jsonplaceholder.typicode.com/users/1')
-    .then(res => res.json())
-    .then(json => console.log(json))
+//     fetch('https://jsonplaceholder.typicode.com/users/1')
+//     .then(res => res.json())
+//     .then(json => console.log(json))

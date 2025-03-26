@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Data</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    canvas {
+      width: 600px;
+      margin: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Weather Data Graph</h1>
+  <canvas id="weatherChart"></canvas>
+
+  <script>
+    const apiKey = 'de903a3e8bbe8adbb80911dd92d3d513';  // Replace with your OpenWeatherMap API key
+    const city = 'London';  // Example city
+
+    // Function to fetch weather data
+    const fetchWeatherData = async () => {
+      // const url = `https://api.openweathermap.org/data/2.5/forecast?q=London,us&mode=xml&appid=${apiKey}`;
+      const url = `https://api.openweathermap.org/data/2.5/forecast?q=London,us&appid=${apiKey}&units=metric`;
+
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        processWeatherData(data);
+      } catch (error) {
+        console.error('Error fetching weather data:', error);
+      }
+    };
+
+    // Function to process and extract weather data
+    const processWeatherData = (data) => {
+      const labels = [];  // Time labels (e.g., hourly)
+      const temperatures = [];  // Temperature values
+
+      // Extract data for the graph
+      data.list.forEach((entry) => {
+        labels.push(new Date(entry.dt * 1000).toLocaleTimeString());  // Convert timestamp to human-readable time
+        temperatures.push(entry.main.temp);  // Temperature in Celsius
+      });
+
+      // Call function to render graph with extracted data
+      renderWeatherGraph(labels, temperatures);
+    };
+
+    // Function to render the graph using Chart.js
+    const renderWeatherGraph = (labels, temperatures) => {
+      const ctx = document.getElementById('weatherChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Temperature (°C)',
+            data: temperatures,
+            borderColor: 'rgba(75, 192, 192, 1)',
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: 'Time'
+              }
+            },
+            y: {
+              title: {
+                display: true,
+                text: 'Temperature (°C)'
+              },
+              min: Math.min(...temperatures) - 5,
+              max: Math.max(...temperatures) + 5
+            }
+          }
+        }
+      });
+    };
+
+    // Fetch the weather data when the page loads
+    fetchWeatherData();
+  </script>
+</body>
+</html>
